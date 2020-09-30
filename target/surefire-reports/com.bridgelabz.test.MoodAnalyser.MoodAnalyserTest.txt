@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.bridgelabz.test.MoodAnalyser.MoodAnalyserTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.047 s <<< FAILURE! - in com.bridgelabz.test.MoodAnalyser.MoodAnalyserTest
+givenMessage_whenEmpty_shouldReturnException(com.bridgelabz.test.MoodAnalyser.MoodAnalyserTest)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: Values should be different. Actual: HAPPY
+	at com.bridgelabz.test.MoodAnalyser.MoodAnalyserTest.givenMessage_whenEmpty_shouldReturnException(MoodAnalyserTest.java:45)
+
+givenMessage_whenNull_shouldReturnException(com.bridgelabz.test.MoodAnalyser.MoodAnalyserTest)  Time elapsed: 0.004 s  <<< ERROR!
+com.bridgelabz.test.MoodAnalyser.MoodAnalysisException: Invalid mood entered
+	at com.bridgelabz.test.MoodAnalyser.MoodAnalyserTest.givenMessage_whenNull_shouldReturnException(MoodAnalyserTest.java:36)
+

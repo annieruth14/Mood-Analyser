@@ -7,16 +7,16 @@ public class MoodAnalyser {
 		this.message = message;
 	}
 	
-	public String analyseMood() {
+	public String analyseMood() throws MoodAnalysisException {
 		try {
+			if(message.length() == 0)
+				throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_EMPTY , "Exception for empty String");
 			if(message.contains("Sad"))
 				return "SAD";
-			else
-				return "HAPPY";
+			return "HAPPY";
 		}
-		catch (Exception e) {
-			System.out.println("This is Exception case");
-			return  "HAPPY";
+		catch (NullPointerException e) {
+			throw new MoodAnalysisException(MoodAnalysisException.ExceptionType.ENTERED_NULL, "Exception for Null");
 		}
 		
 
